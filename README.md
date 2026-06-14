@@ -10,19 +10,19 @@
 [![MongoDB](https://img.shields.io/badge/MongoDB-Atlas-47A248?style=for-the-badge&logo=mongodb)](https://www.mongodb.com/)
 [![Anthropic Claude](https://img.shields.io/badge/AI-Claude_3.5-D97757?style=for-the-badge&logo=anthropic)](https://www.anthropic.com/)
 
-[Features](#-features) • [Architecture](#-architecture) • [Getting Started](#-getting-started) • [Contributing](#-contributing)
+[Overview](#-overview) • [Architecture](#-architecture) • [Developer Setup](#-developer-setup) • [Confidentiality](#-confidentiality-notice)
 
 </div>
 
 ---
 
-## 🚀 Welcome to IELTS Scholar
+## 🚀 Overview
 
-IELTS Scholar is a production-grade, full-stack platform designed to help students master the Academic IELTS exam. By leveraging advanced AI models (Anthropic Claude & Google GenAI), it provides instant, granular feedback on Writing and Speaking tasks, alongside comprehensive Reading and Listening practice modules.
+IELTS Scholar is our proprietary, production-grade, full-stack platform designed to help students master the Academic IELTS exam. By leveraging advanced AI models (Anthropic Claude & Google GenAI), it provides instant, granular feedback on Writing and Speaking tasks, alongside comprehensive Reading and Listening practice modules.
 
 ---
 
-## ✨ Features
+## ✨ Core Capabilities
 
 <details>
 <summary><b>📝 Writing & Speaking AI Evaluation</b></summary>
@@ -73,25 +73,26 @@ IELTS_Platform/
 └── backend/               # Node.js/Express API (MongoDB, Redis, BullMQ, AI SDKs)
 ```
 
-For detailed sub-system documentation, see:
+For detailed sub-system documentation, please refer to the internal engineering docs:
 - 📖 [Frontend Documentation](./client/README.md)
 - 📖 [Backend Documentation](./backend/README.md)
 
 ---
 
-## 🛠️ Getting Started
+## 🛠️ Developer Setup
 
-Follow these steps to set up the project locally.
+Follow these steps to set up the project locally for internal development.
 
 ### 1. Prerequisites
 - Node.js (v18 or higher)
 - Docker & Docker Compose (for easy backend services setup)
-- MongoDB Atlas account (or local MongoDB)
+- Internal Development API Keys (Request from Engineering Lead)
 - Redis instance
 
 ### 2. Clone the Repository
+*Ensure you are authenticated with the company GitHub organization.*
 ```bash
-git clone https://github.com/your-username/IELTS_Platform.git
+git clone https://github.com/Talha-Faizan/IELTS_PLATFORM.git
 cd IELTS_Platform
 ```
 
@@ -135,18 +136,14 @@ The app will be running at [http://localhost:3000](http://localhost:3000).
 
 ---
 
-## 🤝 Contributing
+## 🛑 Confidentiality Notice
 
-We welcome contributions! If you'd like to help improve IELTS Scholar:
+**PROPRIETARY AND CONFIDENTIAL**
 
-1. Fork the repository.
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`).
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`).
-4. Push to the branch (`git push origin feature/AmazingFeature`).
-5. Open a Pull Request.
+This repository and its contents are the intellectual property of the company. It is intended for internal use and authorized contractors only. Do not distribute, copy, or share any part of this codebase outside of the organization without explicit written permission. All code, design patterns, and AI prompt engineering details must remain confidential.
 
 ---
 
 <div align="center">
-  <p>Built with ❤️ for IELTS Aspirants worldwide.</p>
+  <p>Internal Engineering &bull; IELTS Scholar Team</p>
 </div>
