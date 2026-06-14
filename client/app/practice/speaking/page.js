@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState, useCallback } from "react";
+import { useEffect, useRef, useState, useCallback, Suspense } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
@@ -11,7 +11,7 @@ import { usePracticeQuestion } from "@/lib/hooks/usePracticeQuestion";
 import { getQuestionTitle } from "@/lib/dataTransforms";
 import api from "@/lib/api";
 
-export default function SpeakingPracticeContent() {
+function SpeakingPracticeContent() {
   const router = useRouter();
   const dispatch = useDispatch();
   const searchParams = useSearchParams();
@@ -554,5 +554,17 @@ export default function SpeakingPracticeContent() {
         )}
       </div>
     </ProtectedRoute>
+  );
+}
+
+export default function SpeakingPracticePage() {
+  return (
+    <Suspense fallback={
+      <div className="flex h-screen items-center justify-center bg-[#FDFBF7]">
+        <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-[#8A3311]"></div>
+      </div>
+    }>
+      <SpeakingPracticeContent />
+    </Suspense>
   );
 }

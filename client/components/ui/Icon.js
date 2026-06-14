@@ -79,6 +79,7 @@ import {
   Inbox,
   Hash,
   ShieldCheck,
+  Shield,
 } from 'lucide-react';
 
 /**
@@ -243,6 +244,7 @@ const iconMap = {
   star_filled: Star,
   clipboardList: ClipboardList,
   article: FileText,
+  shield: Shield,
 };
 
 export default function Icon({
