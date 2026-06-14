@@ -1,0 +1,198 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,900;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Montserrat", sans-serif;
+  --font-montserrat: "Montserrat", sans-serif;
+
+  --color-primary:                   #333333;
+  --color-primary-container:         #7f011f;
+  --color-on-primary:                #ffffff;
+  --color-on-primary-container:      #ffcebe;
+  --color-primary-fixed:             #ffdbcf;
+  --color-primary-fixed-dim:         #ffb59c;
+  --color-on-primary-fixed:          #390c00;
+  --color-on-primary-fixed-variant:  #822700;
+  --color-inverse-primary:           #ffb59c;
+
+  --color-secondary:                 #a33c2e;
+  --color-secondary-container:       #ff816e;
+  --color-on-secondary:              #ffffff;
+  --color-on-secondary-container:    #73190f;
+  --color-secondary-fixed:           #ffdad4;
+  --color-secondary-fixed-dim:       #ffb4a8;
+  --color-on-secondary-fixed:        #410000;
+  --color-on-secondary-fixed-variant:#832519;
+
+  --color-tertiary:                  #0040a0;
+  --color-tertiary-container:        #0056d1;
+  --color-on-tertiary:               #ffffff;
+  --color-on-tertiary-container:     #ccd8ff;
+  --color-tertiary-fixed:            #dae2ff;
+  --color-tertiary-fixed-dim:        #b2c5ff;
+  --color-on-tertiary-fixed:         #001847;
+  --color-on-tertiary-fixed-variant: #0040a0;
+
+  --color-surface:                   #fff8f6;
+  --color-surface-dim:               #edd5ce;
+  --color-surface-bright:            #fff8f6;
+  --color-surface-container-lowest:  #ffffff;
+  --color-surface-container-low:     #fff1ed;
+  --color-surface-container:         #ffe9e3;
+  --color-surface-container-high:    #fce3dc;
+  --color-surface-container-highest: #f6ddd6;
+  --color-surface-variant:           #f6ddd6;
+  --color-surface-tint:              #ab3600;
+
+  --color-on-surface:                #251914;
+  --color-on-surface-variant:        #59413a;
+  --color-inverse-surface:           #3c2d28;
+  --color-inverse-on-surface:        #ffede8;
+
+  --color-background:                #fff8f6;
+  --color-on-background:             #251914;
+
+  --color-outline:                   #8c7168;
+  --color-outline-variant:           #e0bfb5;
+
+  --color-error:                     #ba1a1a;
+  --color-error-container:           #ffdad6;
+  --color-on-error:                  #ffffff;
+  --color-on-error-container:        #93000a;
+
+  --spacing-margin-desktop:  2rem;
+  --spacing-gutter:          1.5rem;
+  --spacing-sidebar-width:   18rem;
+  --spacing-navbar-height:   4rem;
+
+  --radius-sm:   0.25rem;
+  --radius:      0.5rem;
+  --radius-md:   0.75rem;
+  --radius-xl:   0.75rem;
+  --radius-2xl:  1.5rem;
+  --radius-full: 9999px;
+
+  --text-display-lg:         3rem;
+  --text-headline-lg:        2rem;
+  --text-headline-lg-mobile: 1.75rem;
+  --text-headline-md:        1.5rem;
+  --text-body-lg:            1.125rem;
+  --text-body-md:            1rem;
+  --text-label-lg:           0.875rem;
+  --text-label-sm:           0.75rem;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: #fff8f6;
+  color: #251914;
+  font-family: "Montserrat", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection { background-color: #ab3600; color: #ffffff; }
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: #fff1ed; }
+::-webkit-scrollbar-thumb { background: #e0bfb5; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #8c7168; }
+
+.material-symbols-outlined {
+  font-family: "Material Symbols Outlined";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-feature-settings: "liga";
+  font-feature-settings: "liga";
+  -webkit-font-smoothing: antialiased;
+  user-select: none;
+  vertical-align: middle;
+}
+
+/* Icon size utility classes */
+.icon-xs { font-size: 14px; }
+.icon-sm { font-size: 16px; }
+.icon-md { font-size: 18px; }
+.icon-lg { font-size: 20px; }
+.icon-xl { font-size: 24px; }
+.icon-2xl { font-size: 32px; }
+
+/* Icon interactive states */
+.icon-interactive {
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: 0.375rem;
+  transition: opacity 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+.icon-interactive:hover {
+  opacity: 0.7;
+  background-color: rgba(245, 221, 214, 0.5); /* surface-container-low with opacity */
+}
+
+/* Icon filled variant helper */
+.icon-filled {
+  font-variation-settings: 'FILL' 1;
+}
+
+.bento-card {
+  background-color: #ffffff;
+  border: 1px solid rgba(224, 191, 181, 0.2);
+  box-shadow: 0 4px 20px -2px rgba(27, 28, 21, 0.04);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  transition: box-shadow 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+.bento-card:hover {
+  box-shadow: 0 6px 24px -2px rgba(27, 28, 21, 0.08);
+  border-color: rgba(224, 191, 181, 0.4);
+}
+
+.ambient-shadow { box-shadow: 0 4px 20px -2px rgba(27, 28, 21, 0.04); }
+.progress-bar-bg { background-color: #f6ddd6; }
+.progress-bar-fill { background-color: #ab3600; }
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes waveform {
+  0%, 100% { height: 6px; }
+  50%       { height: 24px; }
+}
+
+.animate-fade-up { animation: fadeInUp 0.5s ease-out forwards; }
+.animate-fade-in { animation: fadeIn 0.4s ease-out forwards; }
+.delay-100 { animation-delay: 0.1s; opacity: 0; }
+.delay-200 { animation-delay: 0.2s; opacity: 0; }
+.delay-300 { animation-delay: 0.3s; opacity: 0; }
+.delay-400 { animation-delay: 0.4s; opacity: 0; }
+.delay-500 { animation-delay: 0.5s; opacity: 0; }
+
+.waveform-bar {
+  width: 3px;
+  border-radius: 2px;
+  background-color: #ab3600;
+  animation: waveform 0.9s ease-in-out infinite;
+}
+.waveform-bar:nth-child(2) { animation-delay: 0.10s; }
+.waveform-bar:nth-child(3) { animation-delay: 0.20s; }
+.waveform-bar:nth-child(4) { animation-delay: 0.15s; }
+.waveform-bar:nth-child(5) { animation-delay: 0.05s; }
+.waveform-bar:nth-child(6) { animation-delay: 0.25s; }
+.waveform-bar:nth-child(7) { animation-delay: 0.30s; }
+.waveform-bar:nth-child(8) { animation-delay: 0.12s; }
+.waveform-bar:nth-child(9) { animation-delay: 0.22s; }
