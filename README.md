@@ -79,6 +79,14 @@ For detailed sub-system documentation, please refer to the internal engineering 
 
 ---
 
+## 💳 Payments (Razorpay)
+
+- **Checkout Flow:** Razorpay Checkout integrated for subscription purchases (free → premium tier).
+- **Webhook Verification:** Incoming Razorpay webhooks are verified using HMAC signature validation before processing, preventing spoofed payment events.
+- **Order Lifecycle:** Handles order creation, payment capture, and subscription activation on successful payment.
+- **Test/Live Mode:** Environment-based key switching via `.env` (`RAZORPAY_KEY_ID`, `RAZORPAY_KEY_SECRET`).
+- **Failure Handling:** Failed/pending payments do not activate premium access; users can retry checkout.
+
 ## 🛠️ Developer Setup
 
 Follow these steps to set up the project locally for internal development.
