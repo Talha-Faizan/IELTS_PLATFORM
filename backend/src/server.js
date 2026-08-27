@@ -95,6 +95,8 @@ app.use("/api/auth/forgot-password", authLimiter);
 app.use("/api/subscriptions/webhook", webhookLimiter);
 
 // ─── Health check ─────────────────────────────────────────────────────────────
+app.get("/ping", (req, res) => res.status(200).send("pong"));
+
 app.get("/api/health", async (req, res) => {
   const mongoose = require("mongoose");
   const { getRedisConnection } = require("./config/redis");
